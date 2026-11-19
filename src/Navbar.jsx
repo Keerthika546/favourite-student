@@ -19,11 +19,11 @@ function Navbar() {
       </h1>
 
       <div className="flex items-center gap-4">
-        <NavLink to="/" end className={`linkClass hidden md:block`}>
+        <NavLink to="/" end className={({ isActive }) => `${linkClass({ isActive })} hidden md:flex`}>
           <i className="fa-solid fa-users"></i>
           Student List
         </NavLink>
-        <NavLink to="/favourites" className={`linkClass hidden md:block`}>
+        <NavLink to="/favourites" className={({ isActive }) => `${linkClass({ isActive })} hidden md:flex`}>
           <i className="fa-solid fa-heart"></i>
           My Favourites
         </NavLink>
