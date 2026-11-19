@@ -19,11 +19,11 @@ function StudentCard({ student }) {
         <div className="flex gap-4 items-center">
           <img className="rounded-full w-24 h-24" src={student.photo} alt={student.name} />
           <div>
-            <h3 className="text-xl font-medium">{student.name}</h3>
-            <p>{student.id}</p>
+            <h3 className="text-sm md:text-xl font-medium">{student.name}</h3>
+            <p className="text-sm md:text-lg">{student.id}</p>
           </div>
           <button
-              className={`heart_btn absolute top-4 right-6 w-fit bg-white rounded-full px-2 py-1 text-5xl ${liked ? "text-red-500" : "text-gray-400"
+              className={`heart_btn absolute top-4 right-6 w-fit bg-white rounded-full px-2 py-1 text-4xl md:text-5xl ${liked ? "text-red-500" : "text-gray-400"
                 }`}
               onClick={toggleFavourite}
             >

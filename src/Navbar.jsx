@@ -11,7 +11,7 @@ function Navbar() {
 
   return (
     <nav className="mt-5 mx-6 flex items-center justify-between rounded-2xl bg-white px-6 py-3 shadow">
-      <h1 className="flex items-center gap-2 text-xl font-semibold">
+      <h1 className="flex items-center gap-2 text-xl font-semibold mr-10 md:mr-0">
         <i className="fa-solid fa-graduation-cap"></i>
         <span>
           Campus<span className="text-[#379240]">Connect</span>
