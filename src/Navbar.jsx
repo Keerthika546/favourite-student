@@ -19,11 +19,11 @@ function Navbar() {
       </h1>
 
       <div className="flex items-center gap-4">
-        <NavLink to="/" end className={linkClass}>
+        <NavLink to="/" end className={`linkClass hidden md:block`}>
           <i className="fa-solid fa-users"></i>
           Student List
         </NavLink>
-        <NavLink to="/favourites" className={linkClass}>
+        <NavLink to="/favourites" className={`linkClass hidden md:block`}>
           <i className="fa-solid fa-heart"></i>
           My Favourites
         </NavLink>
@@ -39,7 +39,7 @@ function Navbar() {
         </Link>
 
         <div className="flex items-center gap-2">
-          <div className="flex h-9 w-9 items-center justify-center rounded-full bg-[#304332] font-medium text-white">
+          <div className="hidden md:flex h-9 w-9 items-center justify-center rounded-full bg-[#304332] font-medium text-white">
             K
           </div>
         </div>

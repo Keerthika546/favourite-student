@@ -10,16 +10,19 @@ function FavHeader() {
             <div className="w-20 h-1 ml-11 mt-2 bg-gradient-to-r from-green-900 to-green-500"></div>
             <p className="bg-[#304332] rounded-3xl px-3 py-2 text-white font-semibold ml-10 my-5 w-fit">Saved Students ({favourites.length})</p>
             {favourites.length === 0 ? (
-                <div className="bg-green-100 flex p-10 mx-10 rounded-2xl">
-                    <img className="h-40 rounded-2xl" src="/images/fav.jpg" alt="fav_student" />
+                <div className="bg-green-100 flex p-4 md:p-10 mx-10 rounded-2xl flex-wrap">
+                    <img className="h-20 md:h-40 rounded-2xl" src="/images/fav.jpg" alt="fav_student" />
                     <div>
-                        <h2 className="text-[#304332] text-5xl mt-5 ml-10 font-bold">No favourite students added yet</h2>
-                        <p className="text-[#304332] ml-11 my-5 text-lg">Start exploring students add your favourites here</p>
+                        <h2 className="text-[#304332] text-lg md:text-5xl mt-5 md:ml-10 font-bold">No favourite students added yet</h2>
+                        <p className="text-[#304332] md:ml-11 my-5 text-sm md:text-lg">Start exploring students add your favourites here</p>
                         <Link to="/" className="bg-[#304332] rounded-3xl px-3 py-2 text-white font-semibold ml-10">Explore Students</Link>
                     </div>
                 </div>
             ) : (
-                <div className="max-w-8xl mx-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">{
+                
+                <div className="max-w-8xl mx-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <Link to="/" className="bg-[#304332] rounded-3xl px-3 py-2 text-white font-semibold block md:hidden w-fit">Explore Students</Link>
+                    {
                 favourites.map((student) => (
                     <div key={student.id} className="relative grid grid-rows-2 my-5 p-4 w-full max-w-sm rounded-2xl bg-white shadow-md overflow-hidden">
                         <div className="flex gap-4 items-center">
